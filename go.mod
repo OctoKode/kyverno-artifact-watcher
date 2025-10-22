@@ -5,7 +5,8 @@ go 1.24
 require (
 	github.com/bitfield/script v0.24.1
 	github.com/google/go-containerregistry v0.20.2
-	sigs.k8s.io/yaml v1.4.0
+	oras.land/oras-go/v2 v2.6.0
+	sigs.k8s.io/yaml v1.6.0
 )
 
 require (
@@ -23,8 +24,8 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/sirupsen/logrus v1.9.1 // indirect
 	github.com/vbatts/tar-split v0.11.3 // indirect
+	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	mvdan.cc/sh/v3 v3.7.0 // indirect
-	oras.land/oras-go/v2 v2.6.0 // indirect
 )
