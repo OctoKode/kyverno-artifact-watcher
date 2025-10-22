@@ -259,10 +259,10 @@ func TestGetEnvAsIntOrDefault(t *testing.T) {
 
 func TestLoadConfigProvider(t *testing.T) {
 	tests := []struct {
-		name        string
-		envVars     map[string]string
-		wantErr     bool
-		errContains string
+		name         string
+		envVars      map[string]string
+		wantErr      bool
+		errContains  string
 		wantProvider string
 	}{
 		{
@@ -297,10 +297,10 @@ func TestLoadConfigProvider(t *testing.T) {
 		{
 			name: "artifactory provider - valid",
 			envVars: map[string]string{
-				"PROVIDER":              "artifactory",
-				"ARTIFACTORY_USERNAME":  "user@example.com",
-				"ARTIFACTORY_PASSWORD":  "password123",
-				"IMAGE_BASE":            "registry.example.com/repo/image:tag",
+				"PROVIDER":             "artifactory",
+				"ARTIFACTORY_USERNAME": "user@example.com",
+				"ARTIFACTORY_PASSWORD": "password123",
+				"IMAGE_BASE":           "registry.example.com/repo/image:tag",
 			},
 			wantErr:      false,
 			wantProvider: "artifactory",
@@ -308,10 +308,10 @@ func TestLoadConfigProvider(t *testing.T) {
 		{
 			name: "artifactory provider - uppercase",
 			envVars: map[string]string{
-				"PROVIDER":              "ARTIFACTORY",
-				"ARTIFACTORY_USERNAME":  "user@example.com",
-				"ARTIFACTORY_PASSWORD":  "password123",
-				"IMAGE_BASE":            "registry.example.com/repo/image:tag",
+				"PROVIDER":             "ARTIFACTORY",
+				"ARTIFACTORY_USERNAME": "user@example.com",
+				"ARTIFACTORY_PASSWORD": "password123",
+				"IMAGE_BASE":           "registry.example.com/repo/image:tag",
 			},
 			wantErr:      false,
 			wantProvider: "artifactory",
@@ -459,17 +459,17 @@ func TestLoadConfigProvider(t *testing.T) {
 
 func TestWatchLoopProviderBehavior(t *testing.T) {
 	tests := []struct {
-		name         string
-		provider     string
-		imageBase    string
-		wantErr      bool
-		errContains  string
+		name        string
+		provider    string
+		imageBase   string
+		wantErr     bool
+		errContains string
 	}{
 		{
-			name:      "artifactory - image base without tag",
-			provider:  "artifactory",
-			imageBase: "registry.example.com/repo/image",
-			wantErr:   true,
+			name:        "artifactory - image base without tag",
+			provider:    "artifactory",
+			imageBase:   "registry.example.com/repo/image",
+			wantErr:     true,
 			errContains: "IMAGE_BASE for artifactory must include a tag",
 		},
 		{

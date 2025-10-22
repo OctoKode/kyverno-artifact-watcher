@@ -1,6 +1,10 @@
 name: Build and and release watcher
 on:
   push:
+    paths:
+      - Dockerfile
+      - main.go
+      - .github/workflows/*.yml
     branches:
       - main
 

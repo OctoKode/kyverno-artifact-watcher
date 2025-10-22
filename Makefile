@@ -18,7 +18,7 @@ build: ## Build the application
 	@go build ${LDFLAGS} -o ${BINARY_NAME} .
 	@echo "Build complete: ${BINARY_NAME}"
 
-test: ## Run tests
+test: fmt ## Run tests
 	@echo "Running tests..."
 	@go test -v -race -coverprofile=coverage.out ./...
 	@echo "Tests complete"
