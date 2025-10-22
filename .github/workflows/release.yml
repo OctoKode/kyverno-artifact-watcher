@@ -4,7 +4,6 @@ on:
     paths:
       - Dockerfile
       - main.go
-      - .github/workflows/*.yml
     branches:
       - main
 
