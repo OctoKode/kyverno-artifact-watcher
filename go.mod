@@ -1,6 +1,6 @@
 module github.com/OctoKode/kyverno-artifact-watcher
 
-go 1.25
+go 1.24
 
 require (
 	github.com/bitfield/script v0.24.1
